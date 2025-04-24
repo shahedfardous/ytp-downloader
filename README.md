@@ -43,7 +43,7 @@ A powerful command-line tool that downloads YouTube playlists in your preferred 
 
 4. **Download the script:**
    ```cmd
-   curl -o ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/youtube-playlist-downloader/main/ytp-downloader.py
+   curl -o ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/ytp-downloader/main/ytp-downloader.py
    ```
 </details>
 
@@ -76,7 +76,7 @@ A powerful command-line tool that downloads YouTube playlists in your preferred 
 
 4. **Download the script:**
    ```bash
-   curl -o ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/youtube-playlist-downloader/main/ytp-downloader.py
+   curl -o ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/ytp-downloader/main/ytp-downloader.py
    ```
 </details>
 
@@ -105,7 +105,7 @@ A powerful command-line tool that downloads YouTube playlists in your preferred 
 
 3. **Download the script:**
    ```bash
-   wget -O ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/youtube-playlist-downloader/main/ytp-downloader.py
+   wget -O ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/ytp-downloader/main/ytp-downloader.py
    chmod +x ytp-downloader.py
    ```
 </details>
@@ -135,7 +135,7 @@ A powerful command-line tool that downloads YouTube playlists in your preferred 
 
 3. **Download the script:**
    ```bash
-   wget -O ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/youtube-playlist-downloader/main/ytp-downloader.py
+   wget -O ytp-downloader.py https://raw.githubusercontent.com/shahedfardous/ytp-downloader/main/ytp-downloader.py
    chmod +x ytp-downloader.py
    ```
 </details>
