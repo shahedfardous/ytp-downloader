@@ -1,6 +1,6 @@
 # 🎬 YouTube Playlist Downloader
 
-A powerful command-line tool that downloads YouTube playlists in your preferred quality with smart resolution detection and efficient error handling.
+A powerful command-line tool that downloads YouTube playlists in your preferred quality with smart resolution detection, robust validation, and comprehensive error handling.
 
 ![YouTube Downloader Banner](./banner.png)
 
@@ -9,9 +9,11 @@ A powerful command-line tool that downloads YouTube playlists in your preferred 
 - 📋 Download entire YouTube playlists with a single command
 - 🎥 Auto-detection of available video resolutions
 - 🔍 Smart quality selection with best video+audio combinations
+- 🔄 Robust playlist validation before starting downloads
 - ⏸️ Resume interrupted downloads automatically
-- 📊 Progress tracking and detailed status information
+- 📊 Real-time progress tracking and detailed status information
 - 🛡️ Bypass common YouTube download restrictions
+- 🚫 Comprehensive error handling with meaningful messages
 
 ## 🚀 Installation
 
@@ -188,8 +190,10 @@ A powerful command-line tool that downloads YouTube playlists in your preferred 
 🎬 YouTube Playlist Downloader
 ----------------------------
 Enter playlist URL: https://www.youtube.com/playlist?list=PLDyQo7g0_nssewwfe3VHmyZZpVJyFn5ojlboVEhE
+Validating playlist URL...
 Output directory [downloads]: guitar-lessons
-Available quality options: 360p, 480p, 720p, 1080p
+Checking available quality options...
+Available quality options: 360p, 480p, 720p, 1080p, 1440p, 2160p
 Maximum video quality [1080p]: 
 
 Fetching playlist information...
@@ -205,7 +209,21 @@ Press Ctrl+C to stop the download process at any time
 [youtube] Playlist Guitar Lessons for Beginners: Downloading 24 videos
 [download] Downloading video 1 of 24
 ...
+
+🏁 Download completed successfully!
+Downloaded 24 file(s) to 'guitar-lessons' directory.
 ```
+
+## ⚙️ Error Handling
+
+The script has robust error handling for common issues:
+
+- **Invalid Playlist URLs:** The script validates playlist URLs before attempting downloads
+- **Non-existent Playlists:** Detects when YouTube reports that a playlist doesn't exist
+- **Empty Playlists:** Checks if playlists contain any videos before proceeding
+- **Connection Issues:** Gracefully handles network interruptions
+- **File System Errors:** Verifies that files were actually downloaded
+- **User Interruptions:** Cleanly handles Ctrl+C stopping of downloads
 
 ## 🔧 Advanced Configuration
 
@@ -214,6 +232,14 @@ You can modify these script parameters for advanced usage:
 - **Format Selection**: The script uses `bestvideo[height<={quality}]+bestaudio/best[height<={quality}]/best` to get the best possible quality
 - **Output Filename Pattern**: Change the `-o` parameter to customize filename formats
 - **Additional Options**: Uncomment the `--verbose` line for detailed debugging information
+
+## 🔄 How It Works
+
+1. **Playlist Validation**: Before downloading, the script validates the playlist URL to ensure it exists
+2. **Resolution Detection**: The script checks the first video in the playlist to determine available resolutions
+3. **Smart Quality Selection**: Uses yt-dlp's advanced format selection to get the best video/audio combination
+4. **Real-time Progress**: Displays download progress for each video in real-time
+5. **Verification**: Verifies that files were actually downloaded before reporting success
 
 ## 🤝 Contributing
 
